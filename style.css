@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Quantico', sans-serif;
     color: #333;
 }
 
@@ -10,7 +10,6 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #5e5fcae6;
-
 }
 
 #root {
@@ -23,20 +22,40 @@ body {
     height: 50vh;
     background-color: #fff;
     border-radius: 15px;
-    box-shadow: 3px 3px 3px #333;
+    box-shadow: 3px 3px 3px #4a4a4a;
 }
 
 #title{
+    text-align: center;
     margin-top: 0;
     font-size: 3rem;
+    width: 100%;
+}
+
+#watch {
+    color: #5e5fcae6;
 }
 
 #time {
+    display: flex;
+    align-items: center;
+    justify-content: end;
     font-size: 10rem;
     width: 90%;
-    text-align: center;
-    background: #bfe2ea;
+    background: #dfdfdf;;
     box-shadow: 3px 3px 3px #eeecf4;
+}
+
+#time p {
+    display: inline;
+    margin: 0;
+}
+
+#secs {
+    align-self: end;
+    font-size: 1rem;
+    font-style: italic;
+    z-index: 6;
 }
 
 #buttonsDiv {
@@ -60,13 +79,9 @@ body {
 }
 
 #play {
-    background-color: #0275d8 
+    background-color: #5e5fcae6 
 }
 
 #pause {
     background-color: #d9534f; 
-}
-
-#reset:hover {
-    color: rgb(255, 145, 2)
 }
