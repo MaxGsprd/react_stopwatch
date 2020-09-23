@@ -7,7 +7,7 @@ function Title() {
 class Stopwatch extends React.Component {
     constructor(props) {
         super(props),
-        this.state = {n: 0, timer: null};
+        this.state = {s:0, timer: null};
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
         this.tick = this.tick.bind(this);
@@ -24,7 +24,7 @@ class Stopwatch extends React.Component {
 
     tick() {
         this.setState( (state) => (
-            {n: state.n + 1 }
+            {s: state.s + 1 }
         ));
     }
 
@@ -42,14 +42,16 @@ class Stopwatch extends React.Component {
 
     reset() {
         window.clearInterval(this.state.timer);
-        this.setState(({timer: null, n:0}));
+        this.setState(({timer: null, s: 0 }));
     }
 
     render() {
         return (
             <React.Fragment>
                 <div id="time">
-                    <p>{this.state.n}</p><span id="secs">seconds</span>
+                    <p>
+                      {this.state.s}<span id="secs">s</span>
+                    </p>
                 </div>
                 <div id="buttonsDiv">
                     {this.state.timer ?

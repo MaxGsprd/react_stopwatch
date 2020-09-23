@@ -39,9 +39,9 @@ body {
 
 #time {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-end;
-    font-size: 10rem;
+    height: 20vh;
     width: 90%;
     background: #dfdfdf;;
     box-shadow: 3px 3px 3px #eeecf4;
@@ -49,6 +49,7 @@ body {
 
 #time p {
     display: inline;
+    font-size: 5rem;
     margin: 0;
 }
 
