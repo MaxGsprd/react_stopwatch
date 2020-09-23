@@ -28,6 +28,14 @@ class Stopwatch extends React.Component {
         ));
     }
 
+    getSeconds() {
+        return ('0' + this.state.s % 60).slice(-2);
+    }
+
+    getMinutes() {
+        return ('0' + Math.floor(this.state.s / 60)).slice(-2);
+    }
+
     pause() {
         window.clearInterval(this.state.timer);
         this.setState(({timer: null}));
@@ -50,7 +58,9 @@ class Stopwatch extends React.Component {
             <React.Fragment>
                 <div id="time">
                     <p>
-                      {this.state.s}<span id="secs">s</span>
+                        {this.getMinutes()} 
+                        :
+                        {this.getSeconds()}
                     </p>
                 </div>
                 <div id="buttonsDiv">
