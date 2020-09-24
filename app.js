@@ -7,7 +7,7 @@ function Title() {
 class Stopwatch extends React.Component {
     constructor(props) {
         super(props),
-        this.state = {s:0, timer: null};
+        this.state = {s: 0, timer: null};
         this.pause = this.pause.bind(this);
         this.play = this.play.bind(this);
         this.tick = this.tick.bind(this);
